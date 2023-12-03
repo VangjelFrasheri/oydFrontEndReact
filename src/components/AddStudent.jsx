@@ -63,13 +63,7 @@ class AddStudent extends Component {
     
 
     render() {
-
-        {
-            if(this.state.cancelForm == true){
-            console.log("the state of cancel is: " + this.state.cancelForm);
-            <Navigate to="/asada" />
-            }  }
-
+        
         return (
             <div>
                 

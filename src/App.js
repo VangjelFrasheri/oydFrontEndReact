@@ -6,12 +6,13 @@ import AddStudent from './components/AddStudent';
 import ErrorPage from './components/ErrorPage';
 import {BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom';
 import SharedLayout from './components/SharedLayout';
+import AddStudents from './components/AddStudents';
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path ="/" element={<SharedLayout/>}>
     <Route index element={<StudentList/>}/>
-    <Route path='/add-student' element = {<AddStudent/>} />
+    <Route path='/add-student' element = {<AddStudents/>} />
     <Route path='/*' element = {<ErrorPage/>} />
     </Route>
   )
