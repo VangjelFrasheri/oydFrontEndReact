@@ -7,6 +7,9 @@ import ErrorPage from './components/ErrorPage';
 import {BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom';
 import SharedLayout from './components/SharedLayout';
 import AddStudents from './components/AddStudents';
+import CalenderEntry from './components/CalenderEntry';
+import WeeklyCalander from './components/WeeklyCalander';
+
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +17,8 @@ const myRouter = createBrowserRouter(
     <Route index element={<StudentList/>}/>
     <Route path='/add-student' element = {<AddStudents/>} />
     <Route path='/*' element = {<ErrorPage/>} />
+    {/* <Route path='/Lessons' element = {<CalenderEntry day={'Monday'} lessonTime={'7:00 PM'}/>} /> */}
+    <Route path='/Lessons' element = {<WeeklyCalander/>} />
     </Route>
   )
 )

@@ -9,6 +9,8 @@ const SharedLayout = () => {
             </div>
             <NavLink className= "linkTextNav" to= '/'> Students</NavLink>
             <NavLink className= "linkTextNav" to= '/add-student'> Add Student</NavLink>
+            <NavLink className= "linkTextNav" to= '/Lessons'> Lessons</NavLink>
+
         </nav>
 
         <main className="main">

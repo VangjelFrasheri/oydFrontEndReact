@@ -30,7 +30,7 @@ const StudentTable  = (props) => {
                                         <td>{student.email}</td>
                                         <td>{student.phone}</td>
                                         <td>{student.belt}</td>
-                                        <td>{student.isActive ? <Checkmark size="medium" color='#ebeb14'/> : <div className='container' ><XCircleFill style={{display: "inline-block", width: "100%", height: "24px"}}/></div>}</td>
+                                        <td>{student.active ? <Checkmark size="medium" color='#ebeb14'/> : <div className='container' ><XCircleFill style={{display: "inline-block", width: "100%", height: "24px"}}/></div>}</td>
                                     </tr>
                                 )
                             }
