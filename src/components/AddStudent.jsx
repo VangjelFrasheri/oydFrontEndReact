@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, Navigate, Outlet } from 'react-router-dom';
 import studentApi from '../api/studentApi';
 
 class AddStudent extends Component {
@@ -11,7 +11,9 @@ class AddStudent extends Component {
             firstName: "",
             lastName: "",
             email: "",
-            phone:""
+            phone:"",
+            addStudentComplet: false,
+            cancelForm: false
         }
         
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
@@ -55,10 +57,13 @@ class AddStudent extends Component {
     }
 
     cancel = () => {
-        useNavigate("/");
+        this.setState({cancelForm: true});
     }
 
+    
+
     render() {
+        
         return (
             <div>
                 
@@ -90,13 +95,15 @@ class AddStudent extends Component {
                                     </div>
 
                                     <button className="btn" onClick={this.saveStudent} style={{marginTop: "10px", backgroundColor:"#ebeb14", color:"white"}}>Add Student</button>
-                                    <Link to="/" className="btn btn-danger" style={{marginLeft: "10px", marginTop: "10px"}}> Cancel</Link>
+                                    <button className="btn btn-danger" onClick={this.cancel} style={{marginLeft: "10px", marginTop: "10px"}}>Cancel</button>
+                                    {/* <Link to="/" className="btn btn-danger" style={{marginLeft: "10px", marginTop: "10px"}}> Cancel</Link> */}
                                 </form>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                
             </div>
         );
     }
