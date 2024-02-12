@@ -38,7 +38,7 @@ const AddStudents = () => {
             email: email,
             phone: phone,
             belt: "WB",
-            isActive: true
+            isActive: 1
         }
         console.log('The added student is ' + JSON.stringify(Student));
         studentApi.addStudent(Student).then(res =>{
